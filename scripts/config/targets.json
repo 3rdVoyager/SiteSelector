@@ -1,17 +1,23 @@
 [
   {
-    "platform": "Wix",
-    "url": "https://www.wix.com/",
-    "category": "All-in-one website builder"
+    "name": "Wix",
+    "url": "https://www.wix.com/plans",
+    "category": "All-in-one website builder",
+    "kind": "builder",
+    "price_hint": "$16-$27/mo"
   },
   {
-    "platform": "Squarespace",
-    "url": "https://www.squarespace.com/",
-    "category": "All-in-one website builder"
+    "name": "Squarespace",
+    "url": "https://www.squarespace.com/pricing",
+    "category": "All-in-one website builder",
+    "kind": "builder",
+    "price_hint": "$23-$36/mo"
   },
   {
-    "platform": "GitHub Pages",
+    "name": "GitHub Pages",
     "url": "https://pages.github.com/",
-    "category": "Static hosting"
+    "category": "Static hosting",
+    "kind": "hosting",
+    "price_hint": "$0/mo"
   }
 ]

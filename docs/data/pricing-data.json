@@ -1,152 +1,47 @@
-[
-  {
-    "name": "Wix",
-    "category": "All-in-one website builder",
-    "kind": "builder",
-    "price": "$16-$27/mo",
-    "summary": "Convenience-first launch path with hosting, templates, and editing all in one place.",
-    "best_for": ["Fast launches", "Non-technical teams", "Simple marketing sites"],
-    "ownership": "Low",
-    "cost_tier": "starter"
-  },
-  {
-    "name": "Squarespace",
-    "category": "All-in-one website builder",
-    "kind": "builder",
-    "price": "$23-$36/mo",
-    "summary": "A polished visual platform for teams that want fewer moving parts and predictable upkeep.",
-    "best_for": ["Design-led sites", "Small organizations", "Brochure pages"],
-    "ownership": "Low",
-    "cost_tier": "starter"
-  },
-  {
-    "name": "Webflow CMS",
-    "category": "Visual CMS platform",
-    "kind": "cms",
-    "price": "$29-$49/mo",
-    "summary": "Useful when custom layouts matter and editors still need a friendly publishing workflow.",
-    "best_for": ["Custom design", "Marketing sites", "Client-friendly editing"],
-    "ownership": "Medium",
-    "cost_tier": "growth"
-  },
-  {
-    "name": "WordPress.org",
-    "category": "Self-hosted CMS",
-    "kind": "cms",
-    "price": "$15-$45/mo + domain",
-    "summary": "Flexible and extensible for teams that want control over content, plugins, and structure.",
-    "best_for": ["Blogs", "Memberships", "Content-heavy sites"],
-    "ownership": "High",
-    "cost_tier": "growth"
-  },
-  {
-    "name": "Ghost",
-    "category": "Publishing CMS",
-    "kind": "cms",
-    "price": "$10-$35/mo + domain",
-    "summary": "Good for blog-first or newsletter-style sites that need a focused editing experience.",
-    "best_for": ["Newsletters", "Articles", "Light memberships"],
-    "ownership": "Medium",
-    "cost_tier": "growth"
-  },
-  {
-    "name": "GitHub Pages",
-    "category": "Static hosting",
-    "kind": "hosting",
-    "price": "$0/mo",
-    "summary": "Very low-cost static hosting for simple content and a high-ownership launch path.",
-    "best_for": ["Docs sites", "Prototype launches", "Low budget teams"],
-    "ownership": "High",
-    "cost_tier": "free"
-  },
-  {
-    "name": "Cloudflare Pages",
-    "category": "Static hosting",
-    "kind": "hosting",
-    "price": "$0-$20/mo",
-    "summary": "Static hosting with strong DNS and CDN options for teams that want a bit more control.",
-    "best_for": ["Custom domains", "Static sites", "Performance-minded teams"],
-    "ownership": "High",
-    "cost_tier": "free"
-  },
-  {
-    "name": "Porkbun",
-    "category": "Domain registrar",
-    "kind": "registrar",
-    "price": "$10-$20/yr",
-    "summary": "Usually the simplest low-cost registrar choice when price and privacy matter.",
-    "best_for": ["Budget-conscious teams", "Simple domains", "First purchases"],
-    "ownership": "High",
-    "cost_tier": "low"
-  },
-  {
-    "name": "Namecheap",
-    "category": "Domain registrar",
-    "kind": "registrar",
-    "price": "$12-$22/yr",
-    "summary": "A familiar registrar with easy onboarding and decent domain management tools.",
-    "best_for": ["General use", "Simple renewals", "Small organizations"],
-    "ownership": "High",
-    "cost_tier": "low"
-  },
-  {
-    "name": "Cloudflare Registrar",
-    "category": "Domain registrar",
-    "kind": "registrar",
-    "price": "$at-cost pricing",
-    "summary": "Best when the team already understands DNS and wants a single control plane.",
-    "best_for": ["DNS control", "Ownership-heavy stacks", "Technical teams"],
-    "ownership": "High",
-    "cost_tier": "low"
-  },
-  {
-    "name": "Tally",
-    "category": "Forms",
-    "kind": "integration",
-    "price": "$0-$29/mo",
-    "summary": "A lightweight forms tool that fits many static and CMS-based launch paths.",
-    "best_for": ["Intake forms", "Contact forms", "Registrations"],
-    "ownership": "Medium",
-    "cost_tier": "starter"
-  },
-  {
-    "name": "Zeffy",
-    "category": "Payments and donations",
-    "kind": "integration",
-    "price": "$0 fees",
-    "summary": "A useful default for nonprofit donations when keeping fees low matters most.",
-    "best_for": ["Donations", "Events", "Nonprofit payments"],
-    "ownership": "Medium",
-    "cost_tier": "free"
-  },
-  {
-    "name": "Stripe Checkout",
-    "category": "Payments",
-    "kind": "integration",
-    "price": "Transaction-based",
-    "summary": "Reliable if the site needs payment collection for products, classes, or deposits.",
-    "best_for": ["E-commerce", "Payments", "Deposits"],
-    "ownership": "High",
-    "cost_tier": "usage"
-  },
-  {
-    "name": "Calendly",
-    "category": "Scheduling",
-    "kind": "integration",
-    "price": "$0-$20/mo",
-    "summary": "A common choice for scheduling links and appointment flows.",
-    "best_for": ["Bookings", "Consultations", "Public scheduling"],
-    "ownership": "Medium",
-    "cost_tier": "starter"
-  },
-  {
-    "name": "TidyCal",
-    "category": "Scheduling",
-    "kind": "integration",
-    "price": "$39 one-time or low monthly",
-    "summary": "Often chosen when the team wants scheduling with a lower recurring bill.",
-    "best_for": ["Budget scheduling", "Simple appointments", "Low recurring cost"],
-    "ownership": "Medium",
-    "cost_tier": "low"
-  }
-]
+{
+  "generated_at": "2026-05-29T01:33:20.041397+00:00",
+  "platforms": [
+    {
+      "name": "Wix Pricing Information | Upgrade to a Premium Plan | Wix.com",
+      "category": "All-in-one website builder",
+      "kind": "builder",
+      "price": "$16-$27/mo",
+      "summary": "Wix Pricing Information | Upgrade to a Premium Plan | Wix.com Product CREATION Website templates Choose from 900+ website templates. AI website builder Create your site in no time with AI. Website design Create your site with intuitive design features. BUSINESS eCommerce site Ru…",
+      "best_for": [
+        "Design-led sites",
+        "Blogs",
+        "Payments"
+      ],
+      "ownership": "Medium",
+      "cost_tier": "starter"
+    },
+    {
+      "name": "Squarespace Pricing Plans & Features — Squarespace",
+      "category": "All-in-one website builder",
+      "kind": "builder",
+      "price": "$23-$36/mo",
+      "summary": "Squarespace Pricing Plans & Features — Squarespace Skip to Main Content Products Solutions Resources Preise Log In undefined undefined Account Dashboard Domains Log Out Get started Start a Free Trial Products Website Websites → Website Templates → AI Website Builder → Design Int…",
+      "best_for": [
+        "Design-led sites",
+        "Blogs",
+        "News and updates"
+      ],
+      "ownership": "Medium",
+      "cost_tier": "starter"
+    },
+    {
+      "name": "GitHub Pages | Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.",
+      "category": "Static hosting",
+      "kind": "hosting",
+      "price": "$0/mo",
+      "summary": "GitHub Pages | Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live. Websites for you and your projects. Hosted directly from your GitHub repository . Just edit, push, and your changes are live. Pages Help Re…",
+      "best_for": [
+        "Blogs",
+        "Static sites",
+        "Domains"
+      ],
+      "ownership": "High",
+      "cost_tier": "free"
+    }
+  ]
+}

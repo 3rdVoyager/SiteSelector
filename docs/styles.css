@@ -47,7 +47,7 @@ body::before {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: minmax(320px, 26vw) minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 0;
   align-items: start;
 }
@@ -64,11 +64,10 @@ body::before {
   position: sticky;
   top: 0;
   min-height: 100vh;
-  min-width: 320px;
-  padding: 28px 24px;
+  padding: 20px 16px;
   display: grid;
   align-content: start;
-  gap: 20px;
+  gap: 16px;
   background: rgba(242, 236, 224, 0.92);
   border-right: 1px solid rgba(31, 28, 24, 0.12);
   box-shadow: none;
@@ -81,7 +80,7 @@ body::before {
 
 .sidebar-topbar {
   display: grid;
-  gap: 16px;
+  gap: 12px;
 }
 
 .sidebar-toggle {
@@ -112,10 +111,6 @@ body::before {
   border-top: 1px solid rgba(31, 28, 24, 0.08);
 }
 
-.sidebar .brand-block h1 {
-  font-size: clamp(2rem, 3vw, 3.2rem);
-}
-
 .sidebar .eyebrow {
   margin-bottom: 8px;
 }
@@ -128,13 +123,13 @@ body::before {
 }
 
 .brand-block h1 {
-  font-size: clamp(2rem, 3vw, 3.4rem);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.sidebar-copy {
-  margin: 14px 0 0;
-  color: var(--muted);
-  line-height: 1.7;
+.brand-mini .eyebrow {
+  display: none;
 }
 
 .sidebar-nav {
@@ -151,7 +146,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 16px;
+  padding: 14px 14px;
 }
 
 .nav-item.is-active {
@@ -437,6 +432,17 @@ body::before {
   margin-bottom: 16px;
 }
 
+.intro-card {
+  padding: 24px 30px;
+}
+
+.home-steps {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .subtle,
 .muted {
   margin: 0;
@@ -526,23 +532,22 @@ a:focus-visible {
 }
 
 .sidebar-collapsed .app-shell {
-  grid-template-columns: 78px minmax(0, 1fr);
+  grid-template-columns: 56px minmax(0, 1fr);
 }
 
 .sidebar-collapsed .sidebar {
-  padding-left: 14px;
-  padding-right: 14px;
+  min-width: 56px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .sidebar-collapsed .brand-block,
-.sidebar-collapsed .sidebar-copy,
-.sidebar-collapsed .sidebar-note,
 .sidebar-collapsed .nav-label {
   display: none;
 }
 
 .sidebar-collapsed .sidebar-nav {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .sidebar-collapsed .nav-item {
