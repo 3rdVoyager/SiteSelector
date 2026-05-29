@@ -47,7 +47,8 @@ body::before {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 26vw) minmax(0, 1fr);
+  gap: 0;
   align-items: start;
 }
 
@@ -63,7 +64,8 @@ body::before {
   position: sticky;
   top: 0;
   min-height: 100vh;
-  padding: 20px 18px;
+  min-width: 320px;
+  padding: 28px 24px;
   display: grid;
   align-content: start;
   gap: 20px;
@@ -74,6 +76,7 @@ body::before {
   backdrop-filter: blur(12px);
   transition: width 180ms ease, padding 180ms ease, transform 180ms ease;
   overflow: hidden;
+  z-index: 2;
 }
 
 .sidebar-topbar {
@@ -110,7 +113,7 @@ body::before {
 }
 
 .sidebar .brand-block h1 {
-  font-size: clamp(1.5rem, 2.6vw, 2.8rem);
+  font-size: clamp(2rem, 3vw, 3.2rem);
 }
 
 .sidebar .eyebrow {
@@ -176,12 +179,10 @@ body::before {
 .content-area {
   display: grid;
   gap: 24px;
-  padding: 24px;
+  padding: 24px 24px 24px 22px;
   min-width: 0;
-}
-
-.content-area > .card {
-  padding: 28px;
+  position: relative;
+  z-index: 1;
 }
 
 .tab-panel {
@@ -197,6 +198,7 @@ body::before {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
   gap: 20px;
+  padding-bottom: 0;
 }
 
 .hero h1,
@@ -239,16 +241,165 @@ body::before {
 .hero-panel,
 .results-card,
 .platform-card,
-.form {
+.wizard,
+.wizard-controls,
+.result {
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
 
-.hero-panel {
-  align-self: end;
-  padding: 18px 20px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(93, 58, 26, 0.12);
+.wizard {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.wizard-question {
+  display: grid;
+  gap: 8px;
+}
+
+.wizard-question h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.wizard-question p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(31, 28, 24, 0.08);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  transition: width 180ms ease;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.option-button {
+  min-width: 0;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(31, 28, 24, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  text-align: left;
+  box-shadow: none;
+}
+
+.option-button .option-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.option-button .option-copy {
+  display: block;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.option-button.is-selected {
+  background: rgba(139, 94, 52, 0.12);
+  border-color: rgba(93, 58, 26, 0.28);
+  color: var(--accent-strong);
+}
+
+.wizard-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wizard-controls button {
+  margin-top: 0;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--accent-strong);
+  border: 1px solid rgba(31, 28, 24, 0.12);
+  box-shadow: none;
+}
+
+.secondary-button:disabled,
+.wizard-controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.result {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.path-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.path-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(31, 28, 24, 0.08);
+  overflow-wrap: anywhere;
+}
+
+.path-card h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.path-card p,
+.path-card ul,
+.path-card ol {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.path-card ul,
+.path-card ol {
+  padding-left: 18px;
+}
+
+.path-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.path-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(139, 94, 52, 0.12);
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .hero-panel ol {
@@ -262,6 +413,16 @@ body::before {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 24px;
+}
+
+.tab-panel > .card,
+.grid > .card {
+  padding: 30px;
+  min-width: 0;
+}
+
+.tab-panel {
+  max-width: 1120px;
 }
 
 .section-heading {
@@ -361,6 +522,7 @@ a:focus-visible {
 }
 
 .data-hero {
+  padding: 30px;
 }
 
 .sidebar-collapsed .app-shell {
@@ -433,21 +595,35 @@ a:focus-visible {
   line-height: 1.6;
 }
 
+.platform-card .platform-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.platform-card .platform-pill {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(93, 58, 26, 0.08);
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 @media (max-width: 900px) {
-  .app-shell,
-  .hero,
-  .grid,
-  .platforms {
+  .option-grid {
     grid-template-columns: 1fr;
   }
 
   .sidebar {
     position: sticky;
-    min-height: auto;
+    z-index: 2;
   }
 
   .content-area {
-    padding-top: 0;
+    padding: 18px;
   }
 
   .section-heading {
@@ -458,23 +634,35 @@ a:focus-visible {
 
 @media (max-width: 640px) {
   .app-shell,
-  .sidebar-collapsed .app-shell {
+  .hero,
+  .grid,
+  .platforms {
     grid-template-columns: 1fr;
   }
 
   .sidebar {
     position: relative;
+    min-width: 0;
     min-height: auto;
+    z-index: 2;
+  }
+
+  .sidebar-collapsed .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
     border-right: 0;
     border-bottom: 1px solid rgba(31, 28, 24, 0.12);
     padding: 16px;
   }
 
   .content-area {
-    padding: 16px;
+    padding: 14px;
   }
 
-  .content-area > .card {
+  .tab-panel > .card,
+  .grid > .card {
     padding: 18px;
   }
 
@@ -488,13 +676,14 @@ a:focus-visible {
     display: grid;
   }
 
+  .wizard-controls {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
   .hero,
   .card,
   .sidebar {
     border-radius: 22px;
-  }
-
-  .sidebar {
-    padding: 16px;
   }
 }

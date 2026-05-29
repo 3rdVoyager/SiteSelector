@@ -53,14 +53,14 @@
           <section class="hero card">
             <div>
               <p class="eyebrow">Home</p>
-              <h2>Choose what matters most.</h2>
+              <h2>Choose the stack path, step by step.</h2>
               <p class="lede">
-                A guided questionnaire for small organizations that need a practical website stack, not a marketing maze.
+                A walkthrough that decides whether you need a CMS, which registrar fits your domain plan, and which services should fill the rest of the stack.
               </p>
             </div>
             <div class="hero-panel">
-              <p class="label">Recommendation engine</p>
-              <p class="subtle">This first version uses rule-based matching plus local JSON pricing data.</p>
+              <p class="label">Walkthrough engine</p>
+              <p class="subtle">Each answer shapes the next step, and the final layout shows the full development path.</p>
             </div>
           </section>
 
@@ -68,72 +68,30 @@
             <article class="card">
               <div class="section-heading">
                 <div>
-                  <p class="eyebrow">Questionnaire</p>
-                  <h3>Shape the recommendation.</h3>
+                  <p class="eyebrow">Walkthrough</p>
+                  <h3>Build the path in order.</h3>
                 </div>
+                <p id="wizard-status" class="subtle">Step 1 of 8</p>
               </div>
 
-              <form id="questionnaire" class="form">
-                <label>
-                  Monthly budget
-                  <select name="budget" required>
-                    <option value="0-15">$0-$15</option>
-                    <option value="15-40" selected>$15-$40</option>
-                    <option value="40-100">$40-$100</option>
-                    <option value="100+">$100+</option>
-                  </select>
-                </label>
+              <div id="wizard" class="wizard"></div>
 
-                <label>
-                  Technical comfort
-                  <select name="technicalComfort" required>
-                    <option value="low">Low</option>
-                    <option value="medium" selected>Medium</option>
-                    <option value="high">High</option>
-                  </select>
-                </label>
-
-                <label>
-                  Need e-commerce?
-                  <select name="ecommerce" required>
-                    <option value="no" selected>No</option>
-                    <option value="maybe">Maybe</option>
-                    <option value="yes">Yes</option>
-                  </select>
-                </label>
-
-                <label>
-                  Prefer ownership and control?
-                  <select name="ownership" required>
-                    <option value="low">Low</option>
-                    <option value="medium" selected>Medium</option>
-                    <option value="high">High</option>
-                  </select>
-                </label>
-
-                <label>
-                  Need scheduling or forms?
-                  <select name="integrations" required>
-                    <option value="no" selected>No</option>
-                    <option value="some">Some</option>
-                    <option value="yes">Yes</option>
-                  </select>
-                </label>
-
-                <button type="submit">Recommend a stack</button>
-              </form>
+              <div class="wizard-controls">
+                <button id="wizard-back" type="button" class="secondary-button">Back</button>
+                <button id="wizard-next" type="button">Next</button>
+              </div>
             </article>
 
             <article class="card results-card">
               <div class="section-heading compact">
                 <div>
-                  <p class="eyebrow">Recommendation</p>
-                  <h3>Your suggested stack</h3>
+                  <p class="eyebrow">Path output</p>
+                  <h3>Development layout</h3>
                 </div>
               </div>
 
               <div id="result" class="result">
-                <p class="muted">Submit the questionnaire to see a recommendation.</p>
+                <p class="muted">Complete the walkthrough to generate a full stack path.</p>
               </div>
             </article>
           </section>
