@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-05-28",
+  "platforms": [
+    {
+      "platform": "Wix",
+      "category": "All-in-one website builder",
+      "starting_price": "$16/mo",
+      "summary": "Best for teams that want speed and convenience with hosting included.",
+      "best_for": ["Simple brochure sites", "Fast launches", "Non-technical users"]
+    },
+    {
+      "platform": "Squarespace",
+      "category": "All-in-one website builder",
+      "starting_price": "$23/mo",
+      "summary": "Strong visual templates and a straightforward editing experience.",
+      "best_for": ["Design-focused sites", "Small organizations", "Content-first pages"]
+    },
+    {
+      "platform": "GitHub Pages + Tally + Zeffy",
+      "category": "Modular open-source stack",
+      "starting_price": "$0-$15/mo",
+      "summary": "A low-cost stack that prioritizes ownership and simple publishing.",
+      "best_for": ["Budget-sensitive teams", "Basic forms", "Donation or payment flows"]
+    },
+    {
+      "platform": "WordPress.org + shared hosting",
+      "category": "Self-hosted CMS",
+      "starting_price": "$10/mo",
+      "summary": "Flexible and widely supported, but requires more maintenance.",
+      "best_for": ["Content-heavy sites", "Ownership-minded teams", "Custom plugins"]
+    }
+  ]
+}

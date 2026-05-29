@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SiteSelector helps small organizations compare website stacks by budget, features, and ownership preferences."
+    />
+    <title>SiteSelector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="sidebar-open">
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Site navigation">
+        <div class="sidebar-topbar">
+          <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar" aria-expanded="true" data-sidebar-toggle>
+            <span aria-hidden="true">☰</span>
+          </button>
+
+          <div class="brand-block">
+            <p class="eyebrow">SiteSelector</p>
+            <h1>The website stack matchmaker.</h1>
+            <p class="sidebar-copy">Compare website paths, budget impact, and ownership tradeoffs from one clean dashboard.</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Primary">
+          <button class="nav-item is-active" type="button" data-tab="home" aria-controls="home-tab" aria-selected="true">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span class="nav-label">Home</span>
+          </button>
+          <button class="nav-item" type="button" data-tab="data" aria-controls="data-tab" aria-selected="false">
+            <span class="nav-icon" aria-hidden="true">{} </span>
+            <span class="nav-label">Site Data</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-panel sidebar-note">
+          <p class="label">How it works</p>
+          <ol>
+            <li>Answer a short questionnaire.</li>
+            <li>Get a stack recommendation and cost signal.</li>
+            <li>Inspect the source JSON on the data tab.</li>
+          </ol>
+        </div>
+      </aside>
+
+      <section class="content-area">
+        <section id="home-tab" class="tab-panel is-active" data-tab-panel="home">
+          <section class="hero card">
+            <div>
+              <p class="eyebrow">Home</p>
+              <h2>Choose what matters most.</h2>
+              <p class="lede">
+                A guided questionnaire for small organizations that need a practical website stack, not a marketing maze.
+              </p>
+            </div>
+            <div class="hero-panel">
+              <p class="label">Recommendation engine</p>
+              <p class="subtle">This first version uses rule-based matching plus local JSON pricing data.</p>
+            </div>
+          </section>
+
+          <section class="grid">
+            <article class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Questionnaire</p>
+                  <h3>Shape the recommendation.</h3>
+                </div>
+              </div>
+
+              <form id="questionnaire" class="form">
+                <label>
+                  Monthly budget
+                  <select name="budget" required>
+                    <option value="0-15">$0-$15</option>
+                    <option value="15-40" selected>$15-$40</option>
+                    <option value="40-100">$40-$100</option>
+                    <option value="100+">$100+</option>
+                  </select>
+                </label>
+
+                <label>
+                  Technical comfort
+                  <select name="technicalComfort" required>
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </label>
+
+                <label>
+                  Need e-commerce?
+                  <select name="ecommerce" required>
+                    <option value="no" selected>No</option>
+                    <option value="maybe">Maybe</option>
+                    <option value="yes">Yes</option>
+                  </select>
+                </label>
+
+                <label>
+                  Prefer ownership and control?
+                  <select name="ownership" required>
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </label>
+
+                <label>
+                  Need scheduling or forms?
+                  <select name="integrations" required>
+                    <option value="no" selected>No</option>
+                    <option value="some">Some</option>
+                    <option value="yes">Yes</option>
+                  </select>
+                </label>
+
+                <button type="submit">Recommend a stack</button>
+              </form>
+            </article>
+
+            <article class="card results-card">
+              <div class="section-heading compact">
+                <div>
+                  <p class="eyebrow">Recommendation</p>
+                  <h3>Your suggested stack</h3>
+                </div>
+              </div>
+
+              <div id="result" class="result">
+                <p class="muted">Submit the questionnaire to see a recommendation.</p>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section id="data-tab" class="tab-panel" data-tab-panel="data" hidden>
+          <section class="card data-hero">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Site Data</p>
+                <h2>JSON source data</h2>
+              </div>
+              <p class="subtle">This is the file the scraper will keep updated.</p>
+            </div>
+
+            <pre id="json-viewer" class="json-viewer" aria-live="polite">Loading data...</pre>
+          </section>
+
+          <section class="card">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Comparison preview</p>
+                <h3>Initial platform data</h3>
+              </div>
+            </div>
+            <div id="platforms" class="platforms"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

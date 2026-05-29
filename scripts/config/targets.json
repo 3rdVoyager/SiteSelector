@@ -1,0 +1,17 @@
+[
+  {
+    "platform": "Wix",
+    "url": "https://www.wix.com/",
+    "category": "All-in-one website builder"
+  },
+  {
+    "platform": "Squarespace",
+    "url": "https://www.squarespace.com/",
+    "category": "All-in-one website builder"
+  },
+  {
+    "platform": "GitHub Pages",
+    "url": "https://pages.github.com/",
+    "category": "Static hosting"
+  }
+]
